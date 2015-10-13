@@ -28,12 +28,21 @@
             </Grid.RowDefinitions>
             
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40*"/>
-                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <controls:BryxImageViewer ThumbnailSource="http://beginners-investing.com/images/learn-how-to-invest.jpg"
+            <controls:BryxImageViewer Margin="5" Foreground="Black"
+                                      ThumbnailSource="http://beginners-investing.com/images/learn-how-to-invest.jpg"
                                       ImageSource="http://beginners-investing.com/images/learn-how-to-invest.jpg"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" TextWrapping="WrapWholeWords" Margin="10"
+                       Text="Here, you could put info about the image."/>
+            
+            <controls:BryxImageViewer Grid.Row="1" Grid.Column="0" Margin="5" Foreground="White"
+                                      ThumbnailSource="http://www.etftrends.com/wp-content/uploads/2010/08/x04_03_3-stock-market-prices_web.jpg.pagespeed.ic.7HxOB-s5vG.jpg"
+                                      ImageSource="http://www.etftrends.com/wp-content/uploads/2010/08/x04_03_3-stock-market-prices_web.jpg.pagespeed.ic.7HxOB-s5vG.jpg"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="WrapWholeWords" Margin="10"
+                       Text="The images are rendered at a smaller size than normal for the thumbnail."/>
         </Grid>
     </Grid>
 </Page>
