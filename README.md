@@ -5,7 +5,7 @@ An Image Viewer for use in C# projects, particularly for Windows 10 applications
 
 ## Usage
 
-Add the BryxImageViewer.xaml and BryxImageViewer.xaml.cs files to your project. In the example project, I added them to a controls folder that lives in the main project directory.
+Add the BryxImageViewer.xaml and BryxImageViewer.xaml.cs files to your project. In the example project, I added them to a controls folder that lives in the main project directory. Also, add the styles that live in the `App.xaml` file to your project's `App.xaml`. This will allow for the styling of the ContentDialog and the Button to look correctly. The button style is not needed. In fact, any styling can be used for it, but the ContentDialog styling is needed in order for then image to take up the whole dialog and for the dialog to operate correctly.
 
 If you added it to a controls folder, you can import the folder by having `xmlns:controls="using:BRYXImageViewer.Controls"` in the topmost tag of your page:
 
