@@ -11,13 +11,17 @@
     <Grid>
         <Button Name="ThumbnailButton" Background="Transparent" Padding="0"
             Click="ThumbnailClicked">
-            <Image Source="{Binding ThumbnailSource}"/>
+            <Viewbox MaxHeight="300" MaxWidth="300">
+                <Image Source="{Binding ThumbnailSource}"/>
+            </Viewbox>
         </Button>
 
         <ContentDialog Name="FullSizeImage" HorizontalAlignment="Center"
                        VerticalAlignment="Center" Margin="0" Background="#333333">
             <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Padding="0" Margin="0">
-                <Image Source="{Binding ImageSource}" Tapped="CloseFullSizeClicked"/>
+                <Viewbox MaxHeight="700">
+                    <Image Source="{Binding ImageSource}" Tapped="CloseFullSizeClicked"/>
+                </Viewbox>
                 <Button HorizontalAlignment="Right" VerticalAlignment="Top" Style="{ThemeResource ButtonStyle}"
                         Height="40" Width="40" Click="CloseFullSizeClicked">
                     <FontIcon Name="ButtonIcon" Glyph="&#57610;" Foreground="{Binding Foreground}"
